@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@*@ViewData["Title"]*@Capital University Debate Forum</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <img src="/images/lincoln_douglas.jpg" class="img-fluid" alt="this will be the CapUni logo">
+    <h1 class="navbar-dark">Capital University Debate Forum</h1>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                        About
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation"><a role="menuitem" tabindex="0" asp-area="" asp-page="/History">History</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="1" asp-area="" asp-page="/About">Archive</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">
+                        Team
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" asp-area="" asp-page="/History">Coaches</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" asp-area="" asp-page="/About">Travel Schedule</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" asp-area="" asp-page="/About"></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" type="button" id="menu3" data-toggle="dropdown">
+                        Outreach
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" asp-area="" asp-page="/History">Middle School</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" asp-area="" asp-page="/About">Middle&nbsp;School&nbsp;Teachers</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" type="button" id="menu4" data-toggle="dropdown">
+                        Resources
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu4">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" asp-area="" asp-page="/History">History</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" asp-area="" asp-page="/About">Join the Team</a></li>
+                    </ul>
+                </li>
+                <a class="nav-link" type="button" id="menu5" asp-area="" asp-page="/History">Donate</a>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - CapitalUniversityDebate - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
